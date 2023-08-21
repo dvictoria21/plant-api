@@ -1,5 +1,3 @@
-// src/api/apiUtils.js
-
 const BASE_URL = "https://manfredjoa-plants-api-56ca2fc58166.herokuapp.com/api";
 
 const handleResponse = async (response) => {
@@ -18,7 +16,7 @@ export const fetchFamilies = async () => {
 };
 
 export const fetchGenera = async () => {
-  const response = await fetch(`${BASE_URL}/genera`); // Use "genera" here
+  const response = await fetch(`${BASE_URL}/genera`);
   return handleResponse(response);
 };
 
@@ -57,7 +55,7 @@ export const deleteFamily = async (familyName) => {
 };
 
 export const createGenus = async (genusData) => {
-  const response = await fetch(`${BASE_URL}/genera`, { // Use "genera" here
+  const response = await fetch(`${BASE_URL}/genera`, { 
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -68,7 +66,7 @@ export const createGenus = async (genusData) => {
 };
 
 export const updateGenus = async (genusName, updatedData) => {
-  const response = await fetch(`${BASE_URL}/genera/edit/${genusName}`, { // Use "genera" here
+  const response = await fetch(`${BASE_URL}/genera/edit/${genusName}`, { 
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -79,8 +77,7 @@ export const updateGenus = async (genusName, updatedData) => {
 };
 
 export const deleteGenus = async (genusName) => {
-  const response = await fetch(`${BASE_URL}/genera/delete/${genusName}`, { // Use "genera" here
-    method: "DELETE",
+  const response = await fetch(`${BASE_URL}/genera/delete/${genusName}`, { 
   });
   return handleResponse(response);
 };
@@ -114,17 +111,20 @@ export const deleteSpecies = async (speciesName) => {
   return handleResponse(response);
 };
 
-export const fetchFamily = async (familyName) => {
+export const fetchFamilyByName = async (familyName) => {
   const response = await fetch(`${BASE_URL}/families/${familyName}`);
   return handleResponse(response);
 };
 
 export const fetchGenus = async (genusName) => {
   const response = await fetch(`${BASE_URL}/genera/${genusName}`);
-  return handleResponse(response);
+  const data = await handleResponse(response);
+  console.log('Fetched Genus Data:', data); 
+  return data;
 };
 
-export const fetchOneSpecies = async (speciesName) => {
+
+export const fetchOneSpeciesByName = async (speciesName) => {
   const response = await fetch(`${BASE_URL}/species/${speciesName}`);
   return handleResponse(response);
 };

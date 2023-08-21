@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchSpecies } from '../api/utilities'; // Update the path if needed
+import { fetchSpecies } from '../api/utilities'; 
 
 function SpeciesList() {
   const [speciesList, setSpeciesList] = useState([]);
 
   useEffect(() => {
-    // Fetch the list of species when the component mounts
     const fetchData = async () => {
       try {
         const data = await fetchSpecies();

@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchOneSpecies } from '../api/utilities'; // Update the import path based on your project structure
+import { fetchOneSpeciesByName } from '../api/utilities';
 
 function SpeciesDetail() {
-  const { id } = useParams();
+  const { speciesName } = useParams();
   const [species, setSpecies] = useState(null);
 
   useEffect(() => {
-    // Fetch species data when the component mounts
     const fetchData = async () => {
       try {
-        const speciesData = await fetchOneSpecies(id); // Use the correct import path
+        const speciesData = await fetchOneSpeciesByName(speciesName);
         setSpecies(speciesData);
       } catch (error) {
         console.error('Error fetching species:', error);
@@ -18,7 +17,7 @@ function SpeciesDetail() {
     };
 
     fetchData();
-  }, [id]);
+  }, [speciesName]);
 
   if (!species) {
     return <div>Loading...</div>;
@@ -29,7 +28,6 @@ function SpeciesDetail() {
       <h2>{species.speciesName}</h2>
       <p>Common Name: {species.commonName}</p>
       <p>Genus: {species.genusName}</p>
-      {/* Display other species information */}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Footer.css'; // Import the Footer.css file
+import './Footer.css';
 
 function Footer() {
   return (
-    <div className="footer"> {/* Use className to apply styles */}
+    <div className="footer">
       &copy; {new Date().getFullYear()} Plant API. All rights reserved.
     </div>
   );

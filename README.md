@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Plant API Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of the Plant API project. It provides a user interface for exploring information about plant families, genera, and species.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Plant API Frontend is a React application that communicates with the Plant API backend to display plant-related information to users. It includes features such as viewing lists of families, genera, and species, as well as detailed information about individual items.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/dvictoria21/plant-frontend.git
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd plant-frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to access the application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies
 
-## Learn More
+- React
+- React Router
+- Axios (for making API requests)
+- CSS (for styling)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- View lists of plant families, genera, and species.
+- Click on individual items to view detailed information.
+- Delete, update, and create plant families.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions to this project are welcome. If you find a bug or want to add a new feature, you can open an issue or submit a pull request.
 
-### Analyzing the Bundle Size
+1. Fork the repository.
+2. Create a new branch:
+   git checkout -b feature/new-feature
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Make your changes and commit them:
+   git commit -m "Add new feature"
 
-### Making a Progressive Web App
+4. Push the changes to your forked repository:
+   git push origin feature/new-feature
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Open a pull request on the main repository.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

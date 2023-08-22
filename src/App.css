@@ -1,38 +1,98 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f8e0;
+  color: #006400;
+}
+
+.header {
+  background-color: #228b22;
+  color: white;
   text-align: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer {
+  background-color: #228b22;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #e0f8e0;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #f7fff7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(33.33% - 20px); 
+  height: 150px;
+  background-color: #c3e8c3;
+  margin: 10px;
+  text-decoration: none;
+  color: #228b22;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  border: 2px solid #228b22; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  border-radius: 8px;
+}
+
+.list-component:hover {
+  background-color: #a2d5a2;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .list-component {
+    width: calc(50% - 20px);
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.links {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  background-color: #a2d5a2;
+  color: #006400;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: #c3e8c3; 
 }

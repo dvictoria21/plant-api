@@ -14,19 +14,21 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/families" element={<FamilyList />} />
-          <Route path="/genera" element={<GenusList />} />
-          <Route path="/species" element={<SpeciesList />} />
-          <Route path="/families/:familyName" element={<FamilyDetail />} />
-          <Route path="/genera/:genusName" element={<GenusDetail />} />
-          <Route path="/species/:speciesName" element={<SpeciesDetail />} />
-        </Routes>
+      <div className="App">
+        <Header className="header" />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/families" element={<FamilyList className="list-component" />} />
+            <Route path="/genera" element={<GenusList className="list-component" />} />
+            <Route path="/species" element={<SpeciesList className="list-component" />} />
+            <Route path="/families/:familyName" element={<FamilyDetail />} />
+            <Route path="/genera/:genusName" element={<GenusDetail />} />
+            <Route path="/species/:speciesName" element={<SpeciesDetail />} />
+          </Routes>
+        </div>
+        <Footer className="footer" />
       </div>
-      <Footer />
     </Router>
   );
 }

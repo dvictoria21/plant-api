@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchSpecies } from '../api/utilities'; 
+import { fetchAllSpecies } from '../api/utilities'; 
 
 function SpeciesList() {
   const [speciesList, setSpeciesList] = useState([]);
@@ -8,7 +8,7 @@ function SpeciesList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchSpecies();
+        const data = await fetchAllSpecies();
         setSpeciesList(data);
       } catch (error) {
         console.error('Error fetching species list:', error.message);
@@ -24,7 +24,7 @@ function SpeciesList() {
       <ul>
         {speciesList.map((species) => (
           <li key={species._id}>
-            <Link to={`/species/${species._id}`}>
+            <Link to={`/species/${species.speciesName}`}>
               {species.speciesName} - {species.commonName}
             </Link>
           </li>

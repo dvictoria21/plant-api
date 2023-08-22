@@ -20,7 +20,7 @@ export const fetchGenera = async () => {
   return handleResponse(response);
 };
 
-export const fetchSpecies = async () => {
+export const fetchAllSpecies = async () => {
   const response = await fetch(`${BASE_URL}/species`);
   return handleResponse(response);
 };
@@ -124,7 +124,9 @@ export const fetchGenus = async (genusName) => {
 };
 
 
-export const fetchOneSpeciesByName = async (speciesName) => {
+export const fetchSpecies = async (speciesName) => {
   const response = await fetch(`${BASE_URL}/species/${speciesName}`);
-  return handleResponse(response);
+  const data = await handleResponse(response);
+  console.log('Fetched Species Data:', data); 
+  return data;
 };
